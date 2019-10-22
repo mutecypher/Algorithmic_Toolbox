@@ -3,15 +3,13 @@ import sys
 
 def get_optimal_value(capacity, weights, values):
     value = 0.
-    # write your code here
-
+    best_val = 0
+    for
+    value = 2
     return value
 
 
 if __name__ == "__main__":
-    data = list(map(int, sys.stdin.read().split()))
-    n, capacity = data[0:2]
-    values = data[2:(2 * n + 2):2]
-    weights = data[3:(2 * n + 2):2]
+    capacity, weights, values = map(int, input().split())
     opt_value = get_optimal_value(capacity, weights, values)
     print("{:.10f}".format(opt_value))
