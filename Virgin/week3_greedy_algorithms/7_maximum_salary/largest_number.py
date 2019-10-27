@@ -3,11 +3,10 @@
 import sys
 
 def largest_number(a):
-    print(a)
-    a.sort(reverse = True)
-    b = [str(i) for i in a]
-    s = ''.join(map(str, b))
-    res = int(s)
+    #write your code here
+    res = ""
+    for x in a:
+        res += x
     return res
 
 if __name__ == '__main__':
@@ -15,4 +14,4 @@ if __name__ == '__main__':
     data = input.split()
     a = data[1:]
     print(largest_number(a))
-
+    

@@ -61,5 +61,5 @@ def get_change(m):
     change = sum(changed)
     return change
 
-m = float(input())
+m = int(input())
 print(get_change(m))
