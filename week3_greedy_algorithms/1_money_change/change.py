@@ -53,7 +53,7 @@ def get_change(m):
     if m != 5:
         nickels = np.floor(left/5)
     else:
-        nickels = 0
+        nickels = 1
     ## get the number of pennies
     pennies = np.rint(left - (5*nickels))
     changed = [ int(fif_coins), int(quarters), int(dimes), int(nickels)

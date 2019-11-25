@@ -42,12 +42,24 @@ def largest_number(numbers):
         if plame[i,0] <  10:
             plame[i,1] = 1
             plame[i,2] = 111 * plame[i,0]
+        elif plame[i,0] == 10:
+            plame[i,2] = -1
         elif plame[i,0] <  100:
+            plame[i,1] = 2
+            plame[i,2] = 10 * plame[i,0] + (np.floor(plame[i,0]/10))
+        elif plame[i,0] == 100:
+            plame[i,2] = -2
             plame[i,1] = 3
-            plame[i,2] = 10 * plame[i,0] + (np.floor(plame[i,0]/10))          
+        elif plame[i,0] < 1000:
+            plame[i,2] = plame[i,0]
+            plame[i,1] = 3
+        elif plame[i,0] == 1000:
+            plame[i,2] = -3
+            plame[i,1] = 3
     ColIndex = 2
  ##   plame = np.sort(plame, axis = ColIndex)
     plame = plame[plame[:,ColIndex].argsort()][::-1]
+    print(plame)
     b = plame[:,0]
     s = ''.join(map(str, b))
     res = int(s)
