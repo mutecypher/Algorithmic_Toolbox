@@ -3,13 +3,15 @@ import sys
 
 def binary_search(a, x):
     left, right = 0, len(a)
-    # write your code here
+    ## quick sort first input retaining indices
+    ## quick 
 
 def linear_search(a, x):
     for i in range(len(a)):
-        if a[i] == x:
-            return i
-    return -1
+        for a[i] < x:
+            if a[i] == x:
+                return i
+            return -1
 
 if __name__ == '__main__':
     input = sys.stdin.read()
